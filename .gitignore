@@ -1,0 +1,10 @@
+**/bin
+**/obj
+**/buildoutput
+.DS_Store
+.vscode/*
+/.vs/*
+*.db
+*.out
+.idea/*
+*.json
