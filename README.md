@@ -52,3 +52,12 @@ In the configuration above, the values within ```${}``` are read from environmen
 
 # Running the application
 The entry point is [Program.cs](PiWriteBack/Program.cs). No argument is required for the ```Main()``` method. This can be executed from the command line. The application will run continuously until ```Ctrl+C``` is pressed.
+
+# Code of Conduct
+
+This project follows https://www.contributor-covenant.org
+
+## License
+
+Apache v2, see [LICENSE](https://github.com/cognitedata/pi-write-back/blob/master/LICENSE).
+
