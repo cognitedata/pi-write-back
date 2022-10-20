@@ -1,0 +1,52 @@
+# Minimal config file containing only highly recommended or required fields.
+# Environment variable substitution is used by default, so ${ENV_VARIABLE} is substituted
+# for environment variable "ENV_VARIABLE"
+
+# Version of the config schema
+version: 1
+
+pi:
+    # Required, host for the PI server
+    host: "${PI_HOST}"
+    # Windows username on the PI server
+    username: "${PI_USERNAME}"
+    # Windows password on the PI server
+    password: "${PI_PASSWORD}"
+
+cognite:
+    # The project to connect to in the API, uses the environment variable COGNITE_PROJECT.
+    project: "${COGNITE_PROJECT}"
+    # Cognite service url
+    host: "{COGNITE_HOST}"
+    # This is for microsoft as IdP, to use a different provider,
+    # set implementation: Basic, and use token-url instead of tenant.
+    # See the example config for the full list of options.
+    idp-authentication:
+        # Directory tenant
+        tenant: ${COGNITE_TENANT_ID}
+        # Application Id
+        client-id: ${COGNITE_CLIENT_ID}
+        # Client secret
+        secret: ${COGNITE_CLIENT_SECRET}
+        # List of resource scopes, ex:
+        scopes:
+          - ${COGNITE_SCOPE}
+          
+logger:
+    console:
+        level: "information"
+    file:
+        level: "debug"
+        path: "logs/log.txt"
+
+state-store:
+    location: "state.db"
+    database: LiteDb
+
+# External IDs of the time series to be ingested into the PI Server
+time-series:
+    external-ids:
+        #- "TimeSeries-External-ID-1"
+        #- "TimeSeries-External-ID-2"
+        #- "TimeSeries-External-ID-3"
+    max-data-points-per-query: 1000

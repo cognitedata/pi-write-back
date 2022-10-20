@@ -1,0 +1,17 @@
+version: 1
+
+time-series:
+  external-ids:
+    - "TimeSeries-External-ID-2"
+    - "TimeSeries-External-ID-2"
+    - "TimeSeries-External-ID-3"
+  max-data-points-per-query: 1000
+
+cognite:
+    project: "project"
+    api-key: "api-key"
+
+logger:
+    console:
+        level: "debug"
+    

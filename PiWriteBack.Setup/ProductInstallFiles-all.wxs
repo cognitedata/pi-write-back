@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="ExecutableFolder">
+            <Directory Id="dirC6596B52F53D0CDC975A7C92D1238127" Name="config" />
+            <Directory Id="dir9C6C7279B0F6802B889C2A2725BE516D" Name="cs" />
+            <Directory Id="dir303F7F292EFC4331CA43881273885ED9" Name="de" />
+            <Directory Id="dirC135EF0C5743DA0EF8863495FCF60970" Name="es" />
+            <Directory Id="dirDAA01D3A65FF504EB371692E312FE7FF" Name="fr" />
+            <Directory Id="dir6005177620A2328E5903EF5B3A632015" Name="it" />
+            <Directory Id="dir477140976B50C8CEAD3C833DA495F509" Name="ja" />
+            <Directory Id="dir480B2CCC5BBE652DE9FEE63A02EB28DB" Name="ko" />
+            <Directory Id="dir067FF38C0C22F6E8A881CB86555D497D" Name="pl" />
+            <Directory Id="dir290058B501473B0291EA012684C490D5" Name="pt-BR" />
+            <Directory Id="dirC02F3F9E9EE1AF35FC3E5B7B4DD226E9" Name="ru" />
+            <Directory Id="dir2ED752B9839BD6C49A38B97AF9FBE4C2" Name="tr" />
+            <Directory Id="dirD6AF93283BBE7613590571644205E2F5" Name="zh-Hans" />
+            <Directory Id="dir9F81E6F3F9EE54C88D4D1DA666D55FA0" Name="zh-Hant" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="ProductFilesComponentGroup">
+            <Component Id="cmpAE4B226F6312BEAC93E8C708BDE92584" Directory="ExecutableFolder" Guid="*">
+                <File Id="filA88E97D04FACBB7755DF56264D40F34A" KeyPath="yes" Source="$(var.build_dir)\Cognite.Common.dll" />
+            </Component>
+            <Component Id="cmp38337FAD258C70F0BEDC9AF31870B57D" Directory="ExecutableFolder" Guid="*">
+                <File Id="filA7234A3BDCA0FF12DC4304F04924ABA4" KeyPath="yes" Source="$(var.build_dir)\Cognite.Configuration.dll" />
+            </Component>
+            <Component Id="cmp10FD057D09214AA4889112F03F97C5A6" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil16ED1CEA38F0A883A0F57EE61163AC29" KeyPath="yes" Source="$(var.build_dir)\Cognite.Extensions.dll" />
+            </Component>
+            <Component Id="cmpB255D7A496EDF3CE065BF711D0411EFC" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil185C748B4F354E83F76EFDC02D47A756" KeyPath="yes" Source="$(var.build_dir)\Cognite.Logging.dll" />
+            </Component>
+            <Component Id="cmp56005C1789BE3E66CD134529D57A8770" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil64C431B580E9B74DCE1C43AD17BD56E4" KeyPath="yes" Source="$(var.build_dir)\Cognite.Metrics.dll" />
+            </Component>
+            <Component Id="cmpFA8F9CFFB56779BCD1A46F6ED887EA97" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil3DC7DC88B91338FF3178BAEF47C81116" KeyPath="yes" Source="$(var.build_dir)\Cognite.StateStorage.dll" />
+            </Component>
+            <Component Id="cmpF0B147ACFF834965141D9D450648EEA0" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil6ADB58D10B245F38B62CBB4A71DEC5B2" KeyPath="yes" Source="$(var.build_dir)\CogniteSdk.dll" />
+            </Component>
+            <Component Id="cmp4E9ADFCBE72CCB0B9C4DC66EEEA01C57" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil636CD830DD8BC90C3C9071D7D38F2ABC" KeyPath="yes" Source="$(var.build_dir)\CogniteSdk.Protobuf.dll" />
+            </Component>
+            <Component Id="cmp5630F238083AFB5AD85A21E52E512F96" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil1DD5F0832B6DD696593F81B77307CD68" KeyPath="yes" Source="$(var.build_dir)\CogniteSdk.Types.dll" />
+            </Component>
+            <Component Id="cmpCDB135E87B57B7A312FE6DD26918BA81" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil932CA2C171C19A5C0A3DA05305D5C399" KeyPath="yes" Source="$(var.build_dir)\ExtractorUtils.dll" />
+            </Component>
+            <Component Id="cmp29346DFC0DC8A6C8BDEA5BDAD43EC521" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil2C6C432DD5411A01113F0F0F3D557590" KeyPath="yes" Source="$(var.build_dir)\FSharp.Core.dll" />
+            </Component>
+            <Component Id="cmpA66295A6235E4F40D3CC73FC9B9C9256" Directory="ExecutableFolder" Guid="*">
+                <File Id="filC631C6898E513B9CF31B435122397E27" KeyPath="yes" Source="$(var.build_dir)\FsToolkit.ErrorHandling.dll" />
+            </Component>
+            <Component Id="cmp1C1BCDBDC143D4CD23072D9DFA80D7FD" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil183A4BEF848E1F9BA9865820F87386BA" KeyPath="yes" Source="$(var.build_dir)\Google.Protobuf.dll" />
+            </Component>
+            <Component Id="cmp552F027A66CF5AF39CBE015143C23E77" Directory="ExecutableFolder" Guid="*">
+                <File Id="filEDB5C9D119730BD76B79FEA4D9340954" KeyPath="yes" Source="$(var.build_dir)\LiteDB.dll" />
+            </Component>
+            <Component Id="cmp8CA3D46C2B965C2FE92205C1D0FBC952" Directory="ExecutableFolder" Guid="*">
+                <File Id="filB5690A697200809BE28AA7AEE48FCD9E" KeyPath="yes" Source="$(var.build_dir)\Microsoft.Bcl.AsyncInterfaces.dll" />
+            </Component>
+            <Component Id="cmp13D61B3B7CC03E26735A018AC5718387" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil8F9C9261F8961DD9C22A3E149B484AC7" KeyPath="yes" Source="$(var.build_dir)\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+            </Component>
+            <Component Id="cmpF4DF07EBECBFDE50CE8FB1565EB7F02C" Directory="ExecutableFolder" Guid="*">
+                <File Id="filD4F00195279742B35BECC60CB77D6E46" KeyPath="yes" Source="$(var.build_dir)\Microsoft.Extensions.DependencyInjection.dll" />
+            </Component>
+            <Component Id="cmp1BECC5FE984CBDA3282EB23FDF1490CA" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil74C2F165F2C75C8E02A711E23E5E3B6A" KeyPath="yes" Source="$(var.build_dir)\Microsoft.Extensions.Http.dll" />
+            </Component>
+            <Component Id="cmp56BC79C4D8C14070E9A413D85D3585F2" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil7EC18FDCF8AAACB9C715062A6DA51523" KeyPath="yes" Source="$(var.build_dir)\Microsoft.Extensions.Http.Polly.dll" />
+            </Component>
+            <Component Id="cmp0ADBB885ED06EB63215D097AED07275F" Directory="ExecutableFolder" Guid="*">
+                <File Id="filC162CA5707EF210AF2A7A8F1E8E038D8" KeyPath="yes" Source="$(var.build_dir)\Microsoft.Extensions.Logging.Abstractions.dll" />
+            </Component>
+            <Component Id="cmp28A31E193557952A50C6E5E8F3E33B7F" Directory="ExecutableFolder" Guid="*">
+                <File Id="filBBC95046FC8A21DBCCCF5AC8B90FE102" KeyPath="yes" Source="$(var.build_dir)\Microsoft.Extensions.Logging.dll" />
+            </Component>
+            <Component Id="cmp21DAEB3F4B067F5C663FDD5E9CE36804" Directory="ExecutableFolder" Guid="*">
+                <File Id="filF72796299F7C24D9B5455CE8371EAFE7" KeyPath="yes" Source="$(var.build_dir)\Microsoft.Extensions.Logging.EventLog.dll" />
+            </Component>
+            <Component Id="cmp9882584275929DD76CE555BFBDE2BAAA" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil11DDED0565C42124651CF466829D13D7" KeyPath="yes" Source="$(var.build_dir)\Microsoft.Extensions.Options.dll" />
+            </Component>
+            <Component Id="cmp9C9C0DF39CC5639CC39F9FF57E0F206A" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil994AFCEDA140266775D5421338F75DA3" KeyPath="yes" Source="$(var.build_dir)\Microsoft.Extensions.Primitives.dll" />
+            </Component>
+            <Component Id="cmp609EE2805F72D3124D347384CA6515D6" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil37BCA098C07A9B92751E653EFFEA0CA2" KeyPath="yes" Source="$(var.build_dir)\Microsoft.Identity.Client.dll" />
+            </Component>
+            <Component Id="cmp71D693268CD0726A4F7AACDFF6E6212E" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil8487A67B7B743C63D7F58C4300C8E92E" KeyPath="yes" Source="$(var.build_dir)\Microsoft.Win32.Primitives.dll" />
+            </Component>
+            <Component Id="cmp9B803E383FBBE58FA13048A2BA38E608" Directory="ExecutableFolder" Guid="*">
+                <File Id="filA3E55F1F8491180184DA92698F1223B3" KeyPath="yes" Source="$(var.build_dir)\netstandard.dll" />
+            </Component>
+            <Component Id="cmp0382A4D91ED5AA2E74EE4A92C3676F56" Directory="ExecutableFolder" Guid="*">
+                <File Id="filC6868C30DBC8DABB6EA86A2A76A310A3" KeyPath="yes" Source="$(var.build_dir)\Oryx.Cognite.dll" />
+            </Component>
+            <Component Id="cmpA13D4D6DAB515F2E39B2AD434AC768A0" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil8EA08AAEDE411CD2C6B15E021343C5F1" KeyPath="yes" Source="$(var.build_dir)\Oryx.dll" />
+            </Component>
+            <Component Id="cmp37AD699D6E111FB03A7A130C3121758F" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil40FA06C50C99DF8144FB0F4FB48B5D98" KeyPath="yes" Source="$(var.build_dir)\Oryx.Protobuf.dll" />
+            </Component>
+            <Component Id="cmpBDA4DA178B6AF4CB7D15B804FC565876" Directory="ExecutableFolder" Guid="*">
+                <File Id="filCDE8182FD8C9EFBD7CDF68307EBED3BE" KeyPath="yes" Source="$(var.build_dir)\Oryx.SystemTextJson.dll" />
+            </Component>
+            <Component Id="cmp25F028B68C90C4A01B055A393E74FFBD" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil60DC42FCED1566D94D04B03038877F64" KeyPath="yes" Source="$(var.build_dir)\OSIsoft.AFSDK.dll" />
+            </Component>
+            <Component Id="cmp53CFE1D694044F88131FC3236C9D5CBC" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil091F9DBC9DA2C18A0494DCBA9DC4E6FA" KeyPath="yes" Source="$(var.build_dir)\OSIsoft.AFSDK.xml" />
+            </Component>
+            <Component Id="cmp92D6DC48D89F9D75B8E4F1CDA41BDBC4" Directory="ExecutableFolder" Guid="*">
+                <File Id="filD65C5346D0D00C2C890E7E7EB288160B" KeyPath="yes" Source="$(var.build_dir)\PiWriteBack.exe" />
+            </Component>
+            <Component Id="cmp436B34A3B2CCDBCD2F243609A23D9A58" Directory="ExecutableFolder" Guid="*">
+                <File Id="filDBF544261537F77D618C05671F338B95" KeyPath="yes" Source="$(var.build_dir)\PiWriteBack.exe.config" />
+            </Component>
+            <Component Id="cmpE83A5AF360D5B81D610009BF89D60458" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil2DC26DD5CBFD77A9955D92A017F5925F" KeyPath="yes" Source="$(var.build_dir)\PiWriteBack.pdb" />
+            </Component>
+            <Component Id="cmpBC2ADF3439C4747755EF91B816DC4994" Directory="ExecutableFolder" Guid="*">
+                <File Id="filEA517C1FBF33A563BFA096E278CDE030" KeyPath="yes" Source="$(var.build_dir)\Polly.dll" />
+            </Component>
+            <Component Id="cmp392D88EF38112A041CA4406C1B7698C6" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil2108013DA02EBE638542EF2C734F81A5" KeyPath="yes" Source="$(var.build_dir)\Polly.Extensions.Http.dll" />
+            </Component>
+            <Component Id="cmp5367DC6AAB15349F5888C6E596916DA9" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil87E17E6E1E00635D812C6FAEEAE97F38" KeyPath="yes" Source="$(var.build_dir)\Prometheus.NetStandard.dll" />
+            </Component>
+            <Component Id="cmp4FA35F1D71556E03E421005CE524EEC6" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil1D9F95332689815EF3AE11BF2A81C162" KeyPath="yes" Source="$(var.build_dir)\Serilog.dll" />
+            </Component>
+            <Component Id="cmp2301B377132E12ACD3300389DA26AF49" Directory="ExecutableFolder" Guid="*">
+                <File Id="filC3ADB8A6C130B078ABCEEFA2E8657925" KeyPath="yes" Source="$(var.build_dir)\Serilog.Extensions.Logging.dll" />
+            </Component>
+            <Component Id="cmpDDB398BB40F671461D1630797A269E4D" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil67D0DA00FC24C997009E0BE05B15713A" KeyPath="yes" Source="$(var.build_dir)\Serilog.Sinks.Async.dll" />
+            </Component>
+            <Component Id="cmp7621B51932726524ED0E05131924BA7F" Directory="ExecutableFolder" Guid="*">
+                <File Id="filBA816491CBC8AF76493034B35ADA7A31" KeyPath="yes" Source="$(var.build_dir)\Serilog.Sinks.Console.dll" />
+            </Component>
+            <Component Id="cmpAA83E93E712C8BDB1563066631C528AC" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil86F415790281AC7EE39149AFB87A8ED8" KeyPath="yes" Source="$(var.build_dir)\Serilog.Sinks.File.dll" />
+            </Component>
+            <Component Id="cmpEF86DC7CF96789FA5043D92865023B24" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil4E7DAC34894871814DEB55FC79C0997B" KeyPath="yes" Source="$(var.build_dir)\System.AppContext.dll" />
+            </Component>
+            <Component Id="cmpD133DB1265977ED0146099BC586A0D36" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil2E39557D29405A4B07B8DD7419C6C695" KeyPath="yes" Source="$(var.build_dir)\System.Buffers.dll" />
+            </Component>
+            <Component Id="cmp98CD3826436175253CE9FF243C3FC104" Directory="ExecutableFolder" Guid="*">
+                <File Id="filAF850846D73E0DCA925E6C1C8D70CF06" KeyPath="yes" Source="$(var.build_dir)\System.Collections.Concurrent.dll" />
+            </Component>
+            <Component Id="cmp3312F69E4D5E6B62C44DD1C7A92D0A0E" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil0E8DBF6FB204C2110FE3EE2960CEC68E" KeyPath="yes" Source="$(var.build_dir)\System.Collections.dll" />
+            </Component>
+            <Component Id="cmpCC5F1E069FCE481CA5B555EA429E9CB5" Directory="ExecutableFolder" Guid="*">
+                <File Id="filD5D7DA994EF60C7FFBF51B34A8DE59A3" KeyPath="yes" Source="$(var.build_dir)\System.Collections.NonGeneric.dll" />
+            </Component>
+            <Component Id="cmpBEB44A9B9C3C5D6BD5B824D59BB9824C" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil74A9BF7EE20C46F092AAD6EF585036B4" KeyPath="yes" Source="$(var.build_dir)\System.Collections.Specialized.dll" />
+            </Component>
+            <Component Id="cmp14C7F79A8B6AB685AFC77EDEB457ACEA" Directory="ExecutableFolder" Guid="*">
+                <File Id="filD9BB287D6E60D98199327B4B12A655E5" KeyPath="yes" Source="$(var.build_dir)\System.CommandLine.dll" />
+            </Component>
+            <Component Id="cmp44C1630F8F6AE2EC85412F676CC5EA22" Directory="ExecutableFolder" Guid="*">
+                <File Id="filDD89478ED2F84127875D3D2B8FB9F0AB" KeyPath="yes" Source="$(var.build_dir)\System.ComponentModel.dll" />
+            </Component>
+            <Component Id="cmpFF21E98E3BBC4E98B73478C560CDDCB3" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil26B1776DFCCE8EF0878EFF40C1E70493" KeyPath="yes" Source="$(var.build_dir)\System.ComponentModel.EventBasedAsync.dll" />
+            </Component>
+            <Component Id="cmpB7D1B6D26AE9D2267E22A31AFA9CC67E" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil752B6ED4913EA73C20CE1439915AC372" KeyPath="yes" Source="$(var.build_dir)\System.ComponentModel.Primitives.dll" />
+            </Component>
+            <Component Id="cmp5414FC6DAF7B618BE8757DEC543F2F5B" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil8A607326EE73E47E0BC14D8F63710B80" KeyPath="yes" Source="$(var.build_dir)\System.ComponentModel.TypeConverter.dll" />
+            </Component>
+            <Component Id="cmp32B03818103B1E05400BC5B9900C530D" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil65D4F8AA2F6CC84F5D0B6BA03FD9EA08" KeyPath="yes" Source="$(var.build_dir)\System.Console.dll" />
+            </Component>
+            <Component Id="cmp0BBEFC37E7D22151FE8F1CC0C0E0B156" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil9FC2008ECA19EDAF92E041FDF071769F" KeyPath="yes" Source="$(var.build_dir)\System.Data.Common.dll" />
+            </Component>
+            <Component Id="cmpD0EB4A6F8740C1F4FBA68815C5E74DEA" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil06290EF2486EC1B6B7D9A51C4DF1B288" KeyPath="yes" Source="$(var.build_dir)\System.Diagnostics.Contracts.dll" />
+            </Component>
+            <Component Id="cmp3AC9BB04455A573153B850D56D2E1874" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil9A61C25C01397B11490E6B4575DD4196" KeyPath="yes" Source="$(var.build_dir)\System.Diagnostics.Debug.dll" />
+            </Component>
+            <Component Id="cmpF0CD303F7F9197E20A3AF04B73D60E6F" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil7CCE9A5A6ABCF05AE33DEE480881EDB7" KeyPath="yes" Source="$(var.build_dir)\System.Diagnostics.DiagnosticSource.dll" />
+            </Component>
+            <Component Id="cmp4F271ED5D1E32151BC44C877476FDB00" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil911E2408DB81B372C0972F362ACE5B11" KeyPath="yes" Source="$(var.build_dir)\System.Diagnostics.EventLog.dll" />
+            </Component>
+            <Component Id="cmp34D1AB4DDF55F42EE185FAC98C6C99BD" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil524ADE484164D0555645255328CA7BC4" KeyPath="yes" Source="$(var.build_dir)\System.Diagnostics.FileVersionInfo.dll" />
+            </Component>
+            <Component Id="cmp2F482003D82198C50F550E1628B95B29" Directory="ExecutableFolder" Guid="*">
+                <File Id="filEFC005F68F61BCD6AF01A49898580771" KeyPath="yes" Source="$(var.build_dir)\System.Diagnostics.Process.dll" />
+            </Component>
+            <Component Id="cmp3B8F60BB36805626BCBE7EF7DE14704F" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil8D01A816F130D29068ACB88ACB684EB1" KeyPath="yes" Source="$(var.build_dir)\System.Diagnostics.StackTrace.dll" />
+            </Component>
+            <Component Id="cmp92D6276B3D7707A3186D38B1C8C1D266" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil0A5F844E68E6701D7A897507B460D439" KeyPath="yes" Source="$(var.build_dir)\System.Diagnostics.TextWriterTraceListener.dll" />
+            </Component>
+            <Component Id="cmp1EB1783D9E3B38217B5A873ECA042B87" Directory="ExecutableFolder" Guid="*">
+                <File Id="filE57D836315161EEBB501AAEC478E0FC8" KeyPath="yes" Source="$(var.build_dir)\System.Diagnostics.Tools.dll" />
+            </Component>
+            <Component Id="cmp7A13794E8B0B6F48A5E71283327304D0" Directory="ExecutableFolder" Guid="*">
+                <File Id="filE620545965FC1E72681BEE1AEAC4600F" KeyPath="yes" Source="$(var.build_dir)\System.Diagnostics.TraceSource.dll" />
+            </Component>
+            <Component Id="cmpA840A0E10155D67BAE341131FA008396" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil8FE60FDEDF4319955DFCC172EBACA6D8" KeyPath="yes" Source="$(var.build_dir)\System.Diagnostics.Tracing.dll" />
+            </Component>
+            <Component Id="cmp65A88062018AD08979D5845DF589655A" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil23B97EEF85A375E251258CF92EA92DFD" KeyPath="yes" Source="$(var.build_dir)\System.Drawing.Primitives.dll" />
+            </Component>
+            <Component Id="cmp215F3258E3D6BE273D6D46440F677480" Directory="ExecutableFolder" Guid="*">
+                <File Id="filCE08849BC585EE06942C16DF9AA52518" KeyPath="yes" Source="$(var.build_dir)\System.Dynamic.Runtime.dll" />
+            </Component>
+            <Component Id="cmp1AC61F8F79DAB6614C393C8A0B2B8B77" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil4A4E6D5E585DD07309E7E7C1E3587517" KeyPath="yes" Source="$(var.build_dir)\System.Globalization.Calendars.dll" />
+            </Component>
+            <Component Id="cmp3B8097093F94A1E0822AEF3A8557413E" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil57B4CD277EA520201C1AE4FD636D229C" KeyPath="yes" Source="$(var.build_dir)\System.Globalization.dll" />
+            </Component>
+            <Component Id="cmp7AA7B515F5E5C507767C95EB11D168C6" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil1759BB46A21F8E25653278398DE672BF" KeyPath="yes" Source="$(var.build_dir)\System.Globalization.Extensions.dll" />
+            </Component>
+            <Component Id="cmp292DBA332D2676C27F0C3827A3BBF7D6" Directory="ExecutableFolder" Guid="*">
+                <File Id="filAE640B1022F05E21AC1B9733972615A7" KeyPath="yes" Source="$(var.build_dir)\System.IO.Compression.dll" />
+            </Component>
+            <Component Id="cmp64D75665C3DA1A21514ADAEA33B89D84" Directory="ExecutableFolder" Guid="*">
+                <File Id="filE4AD3524FAFE45835A8BE1B6425D131B" KeyPath="yes" Source="$(var.build_dir)\System.IO.Compression.ZipFile.dll" />
+            </Component>
+            <Component Id="cmp3314FD2FA2E48F9D2A34C20E38763154" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil3247FA89A5E10849AD6BF79947EC3663" KeyPath="yes" Source="$(var.build_dir)\System.IO.dll" />
+            </Component>
+            <Component Id="cmp895FB7E0548231DD8B0E689F872FC693" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil59B4CC17373D88EF74B6A673A478B0CA" KeyPath="yes" Source="$(var.build_dir)\System.IO.FileSystem.dll" />
+            </Component>
+            <Component Id="cmpD8A854C4870EF3F0322EDF76E5754513" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil968F9172BC07085782B8B792759E449C" KeyPath="yes" Source="$(var.build_dir)\System.IO.FileSystem.DriveInfo.dll" />
+            </Component>
+            <Component Id="cmp9963C64362C1C8FBB3D0F5ACE9A489CD" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil8C8946F046DD71D81B063EE214F45258" KeyPath="yes" Source="$(var.build_dir)\System.IO.FileSystem.Primitives.dll" />
+            </Component>
+            <Component Id="cmp5B0CBE782F417F66176C95C8E8A2691C" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil630C17BBE9AFB90C8FD828BAF3FADFD1" KeyPath="yes" Source="$(var.build_dir)\System.IO.FileSystem.Watcher.dll" />
+            </Component>
+            <Component Id="cmpCF77D43AA22019ACDBC6683DD21AA0DB" Directory="ExecutableFolder" Guid="*">
+                <File Id="filA0B6BB37DB27CAEEE8FA53B57A86B424" KeyPath="yes" Source="$(var.build_dir)\System.IO.IsolatedStorage.dll" />
+            </Component>
+            <Component Id="cmpC2AAACA8278F94C0C27FDD1C1E334FA7" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil73FCE383BF9E89F012520472DFF21700" KeyPath="yes" Source="$(var.build_dir)\System.IO.MemoryMappedFiles.dll" />
+            </Component>
+            <Component Id="cmpD34C0AEDFF50D15F565BB99EFC919FE6" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil71D1952089DE7FE0450FB19FD48D8BA6" KeyPath="yes" Source="$(var.build_dir)\System.IO.Pipes.dll" />
+            </Component>
+            <Component Id="cmpE47093931E66B18D7AFB93F33A550B92" Directory="ExecutableFolder" Guid="*">
+                <File Id="filC928BFA8322B8BF422D0BD6E312B8688" KeyPath="yes" Source="$(var.build_dir)\System.IO.UnmanagedMemoryStream.dll" />
+            </Component>
+            <Component Id="cmpC2D2EACAECF22326AF1DDBFEF6BF6B5F" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil361BAD2146F44D89003F308FA7C2C303" KeyPath="yes" Source="$(var.build_dir)\System.Linq.dll" />
+            </Component>
+            <Component Id="cmp959D318735DB63CE32BA5F7AA5BE641B" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil3F2B6A595DF3E5890BD57814D8800F96" KeyPath="yes" Source="$(var.build_dir)\System.Linq.Expressions.dll" />
+            </Component>
+            <Component Id="cmpE6F43642D740ECB64DFD4A2A76D8088D" Directory="ExecutableFolder" Guid="*">
+                <File Id="filD33838E1CC1AF22F363DD9A913BD83F6" KeyPath="yes" Source="$(var.build_dir)\System.Linq.Parallel.dll" />
+            </Component>
+            <Component Id="cmpEEFEAC40671A5598D515BC4D62E7B506" Directory="ExecutableFolder" Guid="*">
+                <File Id="filE783BFE58AE0FE45737EACD53D10FE70" KeyPath="yes" Source="$(var.build_dir)\System.Linq.Queryable.dll" />
+            </Component>
+            <Component Id="cmp5B796AF9E218C35C15F5FC6C6FAA67C8" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil046A8BAD8DCC492AB42296F0D984A8B1" KeyPath="yes" Source="$(var.build_dir)\System.Memory.dll" />
+            </Component>
+            <Component Id="cmpD693514E0A1DB71149F86804C17BC69A" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil23061C22192CFB6666CF6EC690B11BE9" KeyPath="yes" Source="$(var.build_dir)\System.Net.Http.dll" />
+            </Component>
+            <Component Id="cmp998A090AFBB864D8EAB5042CC0505352" Directory="ExecutableFolder" Guid="*">
+                <File Id="filFD6CED7AD17BA05E755AF9546FDD04DB" KeyPath="yes" Source="$(var.build_dir)\System.Net.NameResolution.dll" />
+            </Component>
+            <Component Id="cmpB7652BE1F8B36CD12AB2436E84D648FE" Directory="ExecutableFolder" Guid="*">
+                <File Id="filAC5C1199E87E5EED7DB19C07A4FA2B91" KeyPath="yes" Source="$(var.build_dir)\System.Net.NetworkInformation.dll" />
+            </Component>
+            <Component Id="cmpE4BA52A106CB18E894F39ACFC88412BF" Directory="ExecutableFolder" Guid="*">
+                <File Id="filB6A2A626F44168D8E4C08B1E440353CE" KeyPath="yes" Source="$(var.build_dir)\System.Net.Ping.dll" />
+            </Component>
+            <Component Id="cmp618B2E6FD87FE8121F2C033A7618047C" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil9D7833A4B87AB8A09679C77F263ACDB8" KeyPath="yes" Source="$(var.build_dir)\System.Net.Primitives.dll" />
+            </Component>
+            <Component Id="cmpFE99A5E6CE4EEC6FF7D18C7B1B88B382" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil06977D0D5594B521BF40D4607A8C49CC" KeyPath="yes" Source="$(var.build_dir)\System.Net.Requests.dll" />
+            </Component>
+            <Component Id="cmp4C5A14B300050EB3DC60C3D808CCC61A" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil4C4D734EAEC3120D103DC8EEE4E4A292" KeyPath="yes" Source="$(var.build_dir)\System.Net.Security.dll" />
+            </Component>
+            <Component Id="cmp5C26C2F403D4332BB3925C9C7231FA60" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil4AB02412034476622AE6FD869E95017A" KeyPath="yes" Source="$(var.build_dir)\System.Net.Sockets.dll" />
+            </Component>
+            <Component Id="cmp99D2E9C88B06586047DDEC9B92A6A43E" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil16AF33B40AE1618268322F760250E0FD" KeyPath="yes" Source="$(var.build_dir)\System.Net.WebHeaderCollection.dll" />
+            </Component>
+            <Component Id="cmpDC7836C5168F8ACC13D434491B07394F" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil9ECCBFEBBFF0535588C0DC01E1785C20" KeyPath="yes" Source="$(var.build_dir)\System.Net.WebSockets.Client.dll" />
+            </Component>
+            <Component Id="cmp10E80FD44D4B320CFCBC1D4C4256631B" Directory="ExecutableFolder" Guid="*">
+                <File Id="filBD2606CACB30D70A99A47440586C48F7" KeyPath="yes" Source="$(var.build_dir)\System.Net.WebSockets.dll" />
+            </Component>
+            <Component Id="cmpAF6A539511956DBF82CA9BFFB0B5D40C" Directory="ExecutableFolder" Guid="*">
+                <File Id="filE76AEFD6083EA2AB4742F60E0A25C702" KeyPath="yes" Source="$(var.build_dir)\System.Numerics.Vectors.dll" />
+            </Component>
+            <Component Id="cmp91E0FD07808577B3B9C6D8D3BD1FF4FC" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil51D216259B202A2E1AD1576A46723FE9" KeyPath="yes" Source="$(var.build_dir)\System.ObjectModel.dll" />
+            </Component>
+            <Component Id="cmpE067C53BB414DA7D3E901C410BD002A9" Directory="ExecutableFolder" Guid="*">
+                <File Id="filA747B300C137BD40A1973AA75E69A4A5" KeyPath="yes" Source="$(var.build_dir)\System.Reflection.dll" />
+            </Component>
+            <Component Id="cmp6072C498D4C7CD6F12D980A2D62F8D01" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil3F0DA64F90165B397BD7896A7581EF3F" KeyPath="yes" Source="$(var.build_dir)\System.Reflection.Extensions.dll" />
+            </Component>
+            <Component Id="cmp89EB1E1C2AAC95660AC2255108875DAD" Directory="ExecutableFolder" Guid="*">
+                <File Id="filC4A8CCC8FA155E65C6206FC0FB81F005" KeyPath="yes" Source="$(var.build_dir)\System.Reflection.Primitives.dll" />
+            </Component>
+            <Component Id="cmpA33E3F45B5B29BBE7C403EAFB5E6D790" Directory="ExecutableFolder" Guid="*">
+                <File Id="filD75631E20E621D678C8CC1092E6BD76C" KeyPath="yes" Source="$(var.build_dir)\System.Resources.Reader.dll" />
+            </Component>
+            <Component Id="cmp4CBB02CF123D9B1861FE0E6C61B22712" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil2566397C83EECCDAA0EE7CCD7C76827A" KeyPath="yes" Source="$(var.build_dir)\System.Resources.ResourceManager.dll" />
+            </Component>
+            <Component Id="cmp435C08D5F2ED8A1D0F63F6946681BD5F" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil4E0E2E174EE9A11F16FE386327692E72" KeyPath="yes" Source="$(var.build_dir)\System.Resources.Writer.dll" />
+            </Component>
+            <Component Id="cmpB4E75B6AC306408BC8116EEA43A22BEB" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil4D352CDF813BCE537A23A41B256D9F07" KeyPath="yes" Source="$(var.build_dir)\System.Runtime.CompilerServices.Unsafe.dll" />
+            </Component>
+            <Component Id="cmpC73B32695943574C5179FB841A646882" Directory="ExecutableFolder" Guid="*">
+                <File Id="filADA81952FFDC3FCE93DCEFEECC56A811" KeyPath="yes" Source="$(var.build_dir)\System.Runtime.CompilerServices.VisualC.dll" />
+            </Component>
+            <Component Id="cmpEAB98A1FD46722C6CE3EC69CAD6AE762" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil08E953902F71683F0C9DC622C151F100" KeyPath="yes" Source="$(var.build_dir)\System.Runtime.dll" />
+            </Component>
+            <Component Id="cmpE8A4AD50E803C6EE6947CA54ED5057D5" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil3F08FB504264D4C336BDD536F09C7589" KeyPath="yes" Source="$(var.build_dir)\System.Runtime.Extensions.dll" />
+            </Component>
+            <Component Id="cmp91970E2924258D1644D8F9650FAB22E0" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil3B61C66534DFA47E143FBE3BCD733211" KeyPath="yes" Source="$(var.build_dir)\System.Runtime.Handles.dll" />
+            </Component>
+            <Component Id="cmpD514A37DEAB6D86396FC96DF8CF55815" Directory="ExecutableFolder" Guid="*">
+                <File Id="filB8442F1F70CFE76F6894DD182CC07075" KeyPath="yes" Source="$(var.build_dir)\System.Runtime.InteropServices.dll" />
+            </Component>
+            <Component Id="cmp25EB457F6840FC29DBFD614C9F5577BD" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil66741E0B8040C606A1B123CD31C6B01D" KeyPath="yes" Source="$(var.build_dir)\System.Runtime.InteropServices.RuntimeInformation.dll" />
+            </Component>
+            <Component Id="cmpA405831765ACF7B1E5247A4D74BAAFD3" Directory="ExecutableFolder" Guid="*">
+                <File Id="filB35F86E8F26DD8EC80A1EB3D123B6B54" KeyPath="yes" Source="$(var.build_dir)\System.Runtime.Numerics.dll" />
+            </Component>
+            <Component Id="cmpE5A54716268E764CA09B565EC043E3C4" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil129201273E862E2C484A2B48A148F4FE" KeyPath="yes" Source="$(var.build_dir)\System.Runtime.Serialization.Formatters.dll" />
+            </Component>
+            <Component Id="cmp5FF05D713C911268CF68C9A29FE8EE12" Directory="ExecutableFolder" Guid="*">
+                <File Id="filF1D81020B40DD57FF29A26756F22DAA9" KeyPath="yes" Source="$(var.build_dir)\System.Runtime.Serialization.Json.dll" />
+            </Component>
+            <Component Id="cmpF10E32B1B6B91638F1A033E37F8FA6CB" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil91D63EC678B7637FE05FBD91C650BF85" KeyPath="yes" Source="$(var.build_dir)\System.Runtime.Serialization.Primitives.dll" />
+            </Component>
+            <Component Id="cmpDDDE4DFAB8B3D310E823F55C6B548674" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil2A9F5AE5E9E763F690BBE0548049A1AD" KeyPath="yes" Source="$(var.build_dir)\System.Runtime.Serialization.Xml.dll" />
+            </Component>
+            <Component Id="cmp5A66AC3DF0EFF0216752EB64B6D3ADD7" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil255468933E0F7FD4556A52D74E66964C" KeyPath="yes" Source="$(var.build_dir)\System.Security.Claims.dll" />
+            </Component>
+            <Component Id="cmpD925BB36A21E75AFE2DC188832ACE4F5" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil219974BA914E2871F6782970F1B7D396" KeyPath="yes" Source="$(var.build_dir)\System.Security.Cryptography.Algorithms.dll" />
+            </Component>
+            <Component Id="cmpFBE8815BA409C357A87ACB76F7348057" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil1ECC1257A588F9E21C1B35DD526A4E03" KeyPath="yes" Source="$(var.build_dir)\System.Security.Cryptography.Csp.dll" />
+            </Component>
+            <Component Id="cmp9BA0EBC9B45E3EFB05B426482D03F1F2" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil04747219AAC813EC6F77E83D41BDB3B9" KeyPath="yes" Source="$(var.build_dir)\System.Security.Cryptography.Encoding.dll" />
+            </Component>
+            <Component Id="cmpD0EA77461F3DB71D53A25CD1AE3116A3" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil2C2C951B27AA1BAF16E866BACE56A4F7" KeyPath="yes" Source="$(var.build_dir)\System.Security.Cryptography.Primitives.dll" />
+            </Component>
+            <Component Id="cmp497B6904760348563B4520B5B130336B" Directory="ExecutableFolder" Guid="*">
+                <File Id="filF87FD45FD8209818EB4513FA645C16DF" KeyPath="yes" Source="$(var.build_dir)\System.Security.Cryptography.X509Certificates.dll" />
+            </Component>
+            <Component Id="cmp1F67C968E4E523010EACFD9F5E8AD53D" Directory="ExecutableFolder" Guid="*">
+                <File Id="filC205BFDAA9322C7195B421D542995C40" KeyPath="yes" Source="$(var.build_dir)\System.Security.Principal.dll" />
+            </Component>
+            <Component Id="cmp22B2072E0DBC75FA77FE9305FC8E0278" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil6D726C36470291534BA7B750DAF9D9F6" KeyPath="yes" Source="$(var.build_dir)\System.Security.Principal.Windows.dll" />
+            </Component>
+            <Component Id="cmp24736FE72CFEFB4E766B9CF663F0AD3F" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil8149EF6E606F33942CAC8A4502B21EE4" KeyPath="yes" Source="$(var.build_dir)\System.Security.SecureString.dll" />
+            </Component>
+            <Component Id="cmp6CD77F906E57F1C4489AABDF2791CC84" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil0E893B674212DC534632691A204D0DF3" KeyPath="yes" Source="$(var.build_dir)\System.ServiceProcess.ServiceController.dll" />
+            </Component>
+            <Component Id="cmpDDBFD0E39E6ACEE5496E6F4EA40E963B" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil17344D6AACA405CF09D3EEF243E5E03B" KeyPath="yes" Source="$(var.build_dir)\System.Text.Encoding.dll" />
+            </Component>
+            <Component Id="cmpF7DA2299281D944F0B73922FF5F00BF0" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil221F441913348A3C7FE21241551E9C75" KeyPath="yes" Source="$(var.build_dir)\System.Text.Encoding.Extensions.dll" />
+            </Component>
+            <Component Id="cmp89E426632F1F3C6C77988C076BA48352" Directory="ExecutableFolder" Guid="*">
+                <File Id="filE8946E24861E23016B0E8C50302F6B09" KeyPath="yes" Source="$(var.build_dir)\System.Text.Encodings.Web.dll" />
+            </Component>
+            <Component Id="cmp2A78F91E359153A0B1F38BB2450829A1" Directory="ExecutableFolder" Guid="*">
+                <File Id="filB7A3D88F27F2FDCD5243E397512C9F50" KeyPath="yes" Source="$(var.build_dir)\System.Text.Json.dll" />
+            </Component>
+            <Component Id="cmp3FF1333790133FCA2C38BE066227C3ED" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil58C90CB96DE58C67E78DA2038B4EAD9F" KeyPath="yes" Source="$(var.build_dir)\System.Text.RegularExpressions.dll" />
+            </Component>
+            <Component Id="cmpD11096B8CA257D49500F53EFB172A54F" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil2E9DC94A2024A29A9006E9FFC3641F05" KeyPath="yes" Source="$(var.build_dir)\System.Threading.dll" />
+            </Component>
+            <Component Id="cmp6D83C2DC92448F1B254065A1D8821A30" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil2076F2790247DF424FF5965E9E9930F8" KeyPath="yes" Source="$(var.build_dir)\System.Threading.Overlapped.dll" />
+            </Component>
+            <Component Id="cmpC22F658470ABFBC69A4D4B95FFE3B116" Directory="ExecutableFolder" Guid="*">
+                <File Id="filE28B9F5AECB9D55D43CB1083DD3896A9" KeyPath="yes" Source="$(var.build_dir)\System.Threading.Tasks.dll" />
+            </Component>
+            <Component Id="cmp5E8C3849F6D7EE308DD3A4ED00D6A12A" Directory="ExecutableFolder" Guid="*">
+                <File Id="filA1405DF4CB19625CBA5FCC59895310A5" KeyPath="yes" Source="$(var.build_dir)\System.Threading.Tasks.Extensions.dll" />
+            </Component>
+            <Component Id="cmp870C0F3298663BCB82CD87F6D2C32361" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil8FDF76DF28E42AF8F0375B899CC48711" KeyPath="yes" Source="$(var.build_dir)\System.Threading.Tasks.Parallel.dll" />
+            </Component>
+            <Component Id="cmp304DF03235315F6C1B5D94A229DC7069" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil248B77663A16518DE31A5B0EC517D50B" KeyPath="yes" Source="$(var.build_dir)\System.Threading.Thread.dll" />
+            </Component>
+            <Component Id="cmpDFC96B30DDD0055B058A14C7528CFC37" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil186916FBCAFF3425CCA330FE96B16FD8" KeyPath="yes" Source="$(var.build_dir)\System.Threading.ThreadPool.dll" />
+            </Component>
+            <Component Id="cmp6E11C5DAC44296AE93AB033D4F5660BE" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil9765F3DE0494B7307F64536CCE0A1636" KeyPath="yes" Source="$(var.build_dir)\System.Threading.Timer.dll" />
+            </Component>
+            <Component Id="cmp4CA0A9B51A504A52D76E66FB7F701D5F" Directory="ExecutableFolder" Guid="*">
+                <File Id="filCBD3182537310797739E6DEC8C71DAB9" KeyPath="yes" Source="$(var.build_dir)\System.ValueTuple.dll" />
+            </Component>
+            <Component Id="cmp4FF755A9A7A2E0789C3BE6557D1E780D" Directory="ExecutableFolder" Guid="*">
+                <File Id="filD5B381B64B76EA6544339206AC4894EC" KeyPath="yes" Source="$(var.build_dir)\System.Xml.ReaderWriter.dll" />
+            </Component>
+            <Component Id="cmp3B5E190F45C55D2CF99ECEC708F0B11E" Directory="ExecutableFolder" Guid="*">
+                <File Id="filCD8E9E65E6439161A71290C350925965" KeyPath="yes" Source="$(var.build_dir)\System.Xml.XDocument.dll" />
+            </Component>
+            <Component Id="cmp4AC0C242DD59B5E8220D08A0539F3EA3" Directory="ExecutableFolder" Guid="*">
+                <File Id="filED55F2241C1C9A387A994D231B7736E4" KeyPath="yes" Source="$(var.build_dir)\System.Xml.XmlDocument.dll" />
+            </Component>
+            <Component Id="cmpE9B3727A8AFBD850A9E628737F22782E" Directory="ExecutableFolder" Guid="*">
+                <File Id="filEEA5E89F9526AEFC3D98B0CBDF051DF7" KeyPath="yes" Source="$(var.build_dir)\System.Xml.XmlSerializer.dll" />
+            </Component>
+            <Component Id="cmpEDB77733D9F50FF5CCBE0B6D055645F1" Directory="ExecutableFolder" Guid="*">
+                <File Id="filF41C0A9F6DD66390634EE1B54D972C77" KeyPath="yes" Source="$(var.build_dir)\System.Xml.XPath.dll" />
+            </Component>
+            <Component Id="cmp237DCAD84F57FE7411272F00A315E0F6" Directory="ExecutableFolder" Guid="*">
+                <File Id="fil892A9C46F7693C3384FC97BBE7AEE499" KeyPath="yes" Source="$(var.build_dir)\System.Xml.XPath.XDocument.dll" />
+            </Component>
+            <Component Id="cmp26D329D780CAE9BC812F02EDE9B86EBA" Directory="ExecutableFolder" Guid="*">
+                <File Id="filE9F089B29462C1E17BD643685C20A741" KeyPath="yes" Source="$(var.build_dir)\YamlDotNet.dll" />
+            </Component>
+            <Component Id="cmp51F3BE4E24A61ECC93D9B15AD683295B" Directory="dirC6596B52F53D0CDC975A7C92D1238127" Guid="*">
+                <File Id="filC6DFBFAA8068A8B9E77E83E2152DDD16" KeyPath="yes" Source="$(var.build_dir)\config\config.example.yml" />
+            </Component>
+            <Component Id="cmpBF9360FED1A9EB1EFAA3CCD10BB6EE2F" Directory="dirC6596B52F53D0CDC975A7C92D1238127" Guid="*">
+                <File Id="filCC6496B2961643092A4CD668B00598B9" KeyPath="yes" Source="$(var.build_dir)\config\config.minimal.yml" />
+            </Component>
+            <Component Id="cmpF9510C167D64AE5D1A716B0E12406673" Directory="dirC6596B52F53D0CDC975A7C92D1238127" Guid="*">
+                <File Id="filEBAE5D0C6647CC0935E145885FB7A72F" KeyPath="yes" Source="$(var.build_dir)\config\config.yml" />
+            </Component>
+            <Component Id="cmp64303CC379234807DC05C96A087E9B0A" Directory="dir9C6C7279B0F6802B889C2A2725BE516D" Guid="*">
+                <File Id="fil5D86DA45101679504E1E78C75A169BAF" KeyPath="yes" Source="$(var.build_dir)\cs\FSharp.Core.resources.dll" />
+            </Component>
+            <Component Id="cmpE2D2F061BDDBDD645BBD8CDC12B878AF" Directory="dir9C6C7279B0F6802B889C2A2725BE516D" Guid="*">
+                <File Id="filDFA00477F6D61D7DD1C099264B0BDF5E" KeyPath="yes" Source="$(var.build_dir)\cs\System.CommandLine.resources.dll" />
+            </Component>
+            <Component Id="cmp7906588694353DAABFF6C818AEB2DE96" Directory="dir303F7F292EFC4331CA43881273885ED9" Guid="*">
+                <File Id="fil36209E02338A3A34AD1296C826490050" KeyPath="yes" Source="$(var.build_dir)\de\FSharp.Core.resources.dll" />
+            </Component>
+            <Component Id="cmpBE97C39B8F654B1DD81F369F7136C4F2" Directory="dir303F7F292EFC4331CA43881273885ED9" Guid="*">
+                <File Id="fil9CC179F0DF9AE25053FBEAC69B7FB0E2" KeyPath="yes" Source="$(var.build_dir)\de\System.CommandLine.resources.dll" />
+            </Component>
+            <Component Id="cmp1BFEB1919FB00FA5908E7CBAF6D0AFB7" Directory="dirC135EF0C5743DA0EF8863495FCF60970" Guid="*">
+                <File Id="filEB5086FA180FD5773792944F2F94CC5D" KeyPath="yes" Source="$(var.build_dir)\es\FSharp.Core.resources.dll" />
+            </Component>
+            <Component Id="cmpFA62AF5EEAF23BA8779C542A5963E409" Directory="dirC135EF0C5743DA0EF8863495FCF60970" Guid="*">
+                <File Id="filA85217CC5548A8A890DCFEE5DD786044" KeyPath="yes" Source="$(var.build_dir)\es\System.CommandLine.resources.dll" />
+            </Component>
+            <Component Id="cmp784A69AA20A5E51552BCE135142302BE" Directory="dirDAA01D3A65FF504EB371692E312FE7FF" Guid="*">
+                <File Id="fil5527A1E18642C16C104284C0989C8981" KeyPath="yes" Source="$(var.build_dir)\fr\FSharp.Core.resources.dll" />
+            </Component>
+            <Component Id="cmpEBD34D9687BA142A92B17DB6428ACC6B" Directory="dirDAA01D3A65FF504EB371692E312FE7FF" Guid="*">
+                <File Id="filF1348DC4E5B453FEE95D4C99DBB892B4" KeyPath="yes" Source="$(var.build_dir)\fr\System.CommandLine.resources.dll" />
+            </Component>
+            <Component Id="cmp137C0BCFA4428000641B5ED81560E7A2" Directory="dir6005177620A2328E5903EF5B3A632015" Guid="*">
+                <File Id="filAA1B502553B5F759A8B788D8BB570AE9" KeyPath="yes" Source="$(var.build_dir)\it\FSharp.Core.resources.dll" />
+            </Component>
+            <Component Id="cmp7386B25305CCDC521FAC720157D77489" Directory="dir6005177620A2328E5903EF5B3A632015" Guid="*">
+                <File Id="fil48A39D7A6301C0B71FD1365D5FB4D161" KeyPath="yes" Source="$(var.build_dir)\it\System.CommandLine.resources.dll" />
+            </Component>
+            <Component Id="cmp93CB6174EE812BF0611838EB3519F081" Directory="dir477140976B50C8CEAD3C833DA495F509" Guid="*">
+                <File Id="fil5B948344820BBB22044468D02D941B34" KeyPath="yes" Source="$(var.build_dir)\ja\FSharp.Core.resources.dll" />
+            </Component>
+            <Component Id="cmp82E93EBAE713A4EFBDF882032C841D2D" Directory="dir477140976B50C8CEAD3C833DA495F509" Guid="*">
+                <File Id="filDBDDC3C9FC76B317CEA682D2B6E159C4" KeyPath="yes" Source="$(var.build_dir)\ja\System.CommandLine.resources.dll" />
+            </Component>
+            <Component Id="cmp5ED43B8B3BEC0C64FC8B44B4D34681A0" Directory="dir480B2CCC5BBE652DE9FEE63A02EB28DB" Guid="*">
+                <File Id="filA13EC5CD365167D9FDCE27B449AE1C0A" KeyPath="yes" Source="$(var.build_dir)\ko\FSharp.Core.resources.dll" />
+            </Component>
+            <Component Id="cmp12E6058A4ED7DC5E571F9955E77F7967" Directory="dir480B2CCC5BBE652DE9FEE63A02EB28DB" Guid="*">
+                <File Id="fil3BB481A8D10EFDE2F8568CBFF2205D45" KeyPath="yes" Source="$(var.build_dir)\ko\System.CommandLine.resources.dll" />
+            </Component>
+            <Component Id="cmpB21B90F69D882EB20B8F182F001320C0" Directory="dir067FF38C0C22F6E8A881CB86555D497D" Guid="*">
+                <File Id="filE99F3BA9E73428A3C030ED45BA64B141" KeyPath="yes" Source="$(var.build_dir)\pl\FSharp.Core.resources.dll" />
+            </Component>
+            <Component Id="cmp559002364837B5BF46312F1F8445B23D" Directory="dir067FF38C0C22F6E8A881CB86555D497D" Guid="*">
+                <File Id="fil81C8FE36D0F8C7D7FDD2CD61B5865B18" KeyPath="yes" Source="$(var.build_dir)\pl\System.CommandLine.resources.dll" />
+            </Component>
+            <Component Id="cmpAA9A7202E060ACD02C7C234B48A11816" Directory="dir290058B501473B0291EA012684C490D5" Guid="*">
+                <File Id="filC3732EF5F34E962D892F7BA6630C6E79" KeyPath="yes" Source="$(var.build_dir)\pt-BR\FSharp.Core.resources.dll" />
+            </Component>
+            <Component Id="cmp974269639D8320A66CC12F0BB3A3D1C8" Directory="dir290058B501473B0291EA012684C490D5" Guid="*">
+                <File Id="fil24BCD98D39414B45A5CE1419464F4CF2" KeyPath="yes" Source="$(var.build_dir)\pt-BR\System.CommandLine.resources.dll" />
+            </Component>
+            <Component Id="cmp2B7B02B76416E8256290B74C3BD331A2" Directory="dirC02F3F9E9EE1AF35FC3E5B7B4DD226E9" Guid="*">
+                <File Id="fil0DB15566CD01E1A8E80F9445D644D038" KeyPath="yes" Source="$(var.build_dir)\ru\FSharp.Core.resources.dll" />
+            </Component>
+            <Component Id="cmpC6A2196B43A91FC39DCFAF35F670DFDD" Directory="dirC02F3F9E9EE1AF35FC3E5B7B4DD226E9" Guid="*">
+                <File Id="fil212BBB881DFA130D3597564AD6038B64" KeyPath="yes" Source="$(var.build_dir)\ru\System.CommandLine.resources.dll" />
+            </Component>
+            <Component Id="cmpC4271AF14A4E19E3FC01ED3AD52BA37D" Directory="dir2ED752B9839BD6C49A38B97AF9FBE4C2" Guid="*">
+                <File Id="fil7487607AD91E876DB910CA262B192536" KeyPath="yes" Source="$(var.build_dir)\tr\FSharp.Core.resources.dll" />
+            </Component>
+            <Component Id="cmpEF1E00B3448F52299D6AAB750030361C" Directory="dir2ED752B9839BD6C49A38B97AF9FBE4C2" Guid="*">
+                <File Id="fil0C99389A473ACD6AA88C932A06D98C36" KeyPath="yes" Source="$(var.build_dir)\tr\System.CommandLine.resources.dll" />
+            </Component>
+            <Component Id="cmp67D6D3491A7AC523FECC5807278EB869" Directory="dirD6AF93283BBE7613590571644205E2F5" Guid="*">
+                <File Id="filDC96537D3F652BD3188D9441B8C8AD63" KeyPath="yes" Source="$(var.build_dir)\zh-Hans\FSharp.Core.resources.dll" />
+            </Component>
+            <Component Id="cmp789DC16C0A9582CACE4DD6BCBF8EB56E" Directory="dirD6AF93283BBE7613590571644205E2F5" Guid="*">
+                <File Id="fil0E97DBE89AE2A5BE74A6A4EEED9C515E" KeyPath="yes" Source="$(var.build_dir)\zh-Hans\System.CommandLine.resources.dll" />
+            </Component>
+            <Component Id="cmp5C51C1426F6C047963572B5F901C2330" Directory="dir9F81E6F3F9EE54C88D4D1DA666D55FA0" Guid="*">
+                <File Id="filA7CCED5073D0FDF31B1790E3C6B54244" KeyPath="yes" Source="$(var.build_dir)\zh-Hant\FSharp.Core.resources.dll" />
+            </Component>
+            <Component Id="cmp6BA555F3629FB4638CDDB91FC9D55B58" Directory="dir9F81E6F3F9EE54C88D4D1DA666D55FA0" Guid="*">
+                <File Id="filC3EAB4E736B0D2EA97F01914DF232EB7" KeyPath="yes" Source="$(var.build_dir)\zh-Hant\System.CommandLine.resources.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>
