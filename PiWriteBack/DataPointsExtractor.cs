@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PiWriteBack
+namespace Cognite.PiWriteBack
 {
     /// <summary>
     /// Simple CDF data point extractor. Ingests CDF time series
@@ -16,13 +16,13 @@ namespace PiWriteBack
         private readonly Cdf _cdf;
         private readonly PiServer _pi;
         private readonly WriteBackState _state;
-        private readonly Config _config;
+        private readonly FullConfig _config;
 
         public DataPointsExtractor(
             Cdf cdf,
             PiServer pi,
             WriteBackState state,
-            Config config)
+            FullConfig config)
         {
             _cdf = cdf;
             _pi = pi;

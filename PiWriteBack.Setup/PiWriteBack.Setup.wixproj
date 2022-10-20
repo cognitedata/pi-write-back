@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" InitialTargets="EnsureWixToolsetInstalled" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.10</ProductVersion>
+    <ProjectGuid>ae534515-bf81-4c89-bc51-67cd5a2e78ef</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>$(output_name)</OutputName>
+    <OutputType>Package</OutputType>
+    <DefineSolutionProperties>false</DefineSolutionProperties>
+    <Name>PiAfExtractor.Setup</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PiWriteBack.wxs" />
+    <Compile Include="ProductInstallFiles.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixUtilExtension">
+      <HintPath>$(WixExtDir)\WixUtilExtension.dll</HintPath>
+      <Name>WixUtilExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixUIExtension">
+      <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
+      <Name>WixUIExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="build.ps1" />
+    <Content Include="Resources\black16x16.ico" />
+    <Content Include="Resources\black32x32.ico" />
+    <Content Include="Resources\License.rtf" />
+    <Content Include="Resources\InstBanner.bmp" />
+    <Content Include="Resources\InstDialog.bmp" />
+    <Content Include="setup-config.json" />
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" Condition=" '$(WixTargetsPath)' != '' " />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets" Condition=" '$(WixTargetsPath)' == '' AND Exists('$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets') " />
+  <Target Name="EnsureWixToolsetInstalled" Condition=" '$(WixTargetsImported)' != 'true' ">
+    <Error Text="The WiX Toolset v3.11 (or newer) build tools must be installed to build this project. To download the WiX Toolset, see http://wixtoolset.org/releases/" />
+  </Target>
+  <PropertyGroup>
+    <DefineConstants>target_version=$(target_version);product_name=$(product_name);product_short_name=$(product_short_name);build_dir=..\buildoutput\;exe_name=$(exe_name);service_args=$(service_args);service=$(service);config_dir=$(config_dir);upgrade_guid=$(upgrade_guid)</DefineConstants>
+  </PropertyGroup>
+  <Target Name="BeforeBuild">
+    <HeatDirectory OutputFile="$(ProjectDir)\ProductInstallFiles-all.wxs" Directory="..\buildoutput\" ComponentGroupName="ProductFilesComponentGroup" DirectoryRefId="ExecutableFolder" AutogenerateGuids="true" PreprocessorVariable="var.build_dir" SuppressRegistry="true" SuppressRootDirectory="true" ToolPath="$(WixToolPath)" NoLogo="true" />
+    <XslTransformation XslInputPath="$(ProjectDir)\heat-filter.xslt" XmlInputPaths="$(ProjectDir)\ProductInstallFiles-all.wxs" OutputPaths="$(ProjectDir)\ProductInstallFiles.wxs" />
+  </Target>
+</Project>

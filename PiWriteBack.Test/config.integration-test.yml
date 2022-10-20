@@ -1,0 +1,21 @@
+version: 1
+
+pi:
+    host: ${PI_HOST}
+    username: ${PI_USERNAME}
+    password: ${PI_PASSWORD}
+
+time-series:
+  external-ids:
+    - "TimeSeries-External-ID-1"
+    - "TimeSeries-External-ID-2"
+    - "TimeSeries-External-ID-3"
+  max-data-points-per-query: 1000
+
+cognite:
+    project: "project"
+    api-key: "api-key"
+
+logger:
+    console:
+        level: "debug"

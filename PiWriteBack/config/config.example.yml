@@ -1,0 +1,85 @@
+# Template for the config file,
+# Defaults to config.yml in ./config.
+# The values here are generally the default values, except for the contents of lists etc.
+# Your config file can contain only a subset of these config options. Any extra options will
+# cause the extractor to fail.
+
+# Version of the config schema
+version: 1
+
+pi:
+    # Required, host for the PI server
+    host: "${PI_HOST}"
+    # Windows username on the PI server
+    username: "${PI_USERNAME}"
+    # Windows password on the PI server
+    password: "${PI_PASSWORD}"
+    # Use native PI user authentication if true or Windows authentication if false.
+    #native-authentication: false
+    # When connecting to a PI Collective, attempt to connect to the member with highest priority.
+    # If set to false, attempt to connect to the collective member with the same name as hostname.
+    # Disabled by default
+    #use-member-priority: false
+
+cognite:
+    # The project to connect to in the API, uses the environment variable COGNITE_PROJECT.
+    project: "${COGNITE_PROJECT}"
+    # Cognite service url
+    host: "{COGNITE_HOST}"
+    # This is for microsoft as IdP, to use a different provider,
+    # set implementation: Basic, and use token-url instead of tenant.
+    # See the example config for the full list of options.
+    idp-authentication:
+        # URL to fetch tokens from, either this, or tenant must be present.
+        token-url:
+        # Identity provider authority endpoint (optional, only used in combination with tenant)
+        authority: "https://login.microsoftonline.com/"
+        # Directory tenant
+        tenant: ${COGNITE_TENANT_ID}
+        # Application Id
+        client-id: ${COGNITE_CLIENT_ID}
+        # Client secret
+        secret: ${COGNITE_CLIENT_SECRET}
+        # List of resource scopes
+        scopes:
+          - ${COGNITE_SCOPE}
+        # Which implementation to use in the authenticator. One of
+        # MSAL (recommended) - Microsoft Authentication Library, Works only with authority/tenant
+        # Basic - Post to authentication endpoint and parse JSON response, works with both authority/tenant and token-url
+        # Default is MSAL
+        audience:
+        # Audience
+        implementation: MSAL
+        # Minimum time-to-live in seconds for the token (optional)
+        min-ttl: 30
+
+# Configure logger to console or file
+logger:
+    # Writes log events at this level to the Console. One of verbose, debug, information, warning, error, fatal.
+    # If not present, or if the level is invalid, Console is not used.
+    console:
+        level:
+        # Log events at or above this level are redirected to standard error.
+        stderrLevel:
+    # Writes log events at this level to a file. Logs will roll over to new files daily.
+    # If not present, or if the level is invalid, logging to file is disabled.
+    file:
+        level:
+        # Path for logging output. If not present, logging to file is disabled.
+
+# Saves the extraction state periodically so that extraction can be resumed faster on the next run.
+state-store:
+    # Which type of database to use. One of "None", "Raw", "LiteDb"
+    database: "None"
+
+    # Path to .db file used by the state storage, or name of table in raw. Default is none, so this needs to be specified.
+    # Leave empty or commented out to disable storing/restoring the extration state locally.
+    location: "buffer.db"
+
+# External IDs of the time series to be ingested into the PI Server
+time-series:
+    external-ids:
+        #- "TimeSeries-External-ID-1"
+        #- "TimeSeries-External-ID-2"
+        #- "TimeSeries-External-ID-3"
+    max-data-points-per-query: 1000

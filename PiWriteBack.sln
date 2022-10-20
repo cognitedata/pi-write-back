@@ -1,20 +1,52 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32319.34
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiWriteBack", "PiWriteBack\PiWriteBack.csproj", "{0F03D932-6174-42AE-A054-5BC94475678D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CD1457EA-D7AD-449D-B696-735F8A632909}"
+	ProjectSection(SolutionItems) = preProject
+		deploy.py = deploy.py
+		Jenkinsfile = Jenkinsfile
+		publish.ps1 = publish.ps1
+		run-tests.ps1 = run-tests.ps1
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PiWriteBack.Test", "PiWriteBack.Test\PiWriteBack.Test.csproj", "{1DA72909-E800-499F-A249-58C94F2D70AE}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "PiWriteBack.Setup", "PiWriteBack.Setup\PiWriteBack.Setup.wixproj", "{AE534515-BF81-4C89-BC51-67CD5A2E78EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0F03D932-6174-42AE-A054-5BC94475678D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0F03D932-6174-42AE-A054-5BC94475678D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F03D932-6174-42AE-A054-5BC94475678D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0F03D932-6174-42AE-A054-5BC94475678D}.Debug|x86.Build.0 = Debug|Any CPU
 		{0F03D932-6174-42AE-A054-5BC94475678D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F03D932-6174-42AE-A054-5BC94475678D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F03D932-6174-42AE-A054-5BC94475678D}.Release|x86.ActiveCfg = Release|Any CPU
+		{0F03D932-6174-42AE-A054-5BC94475678D}.Release|x86.Build.0 = Release|Any CPU
+		{1DA72909-E800-499F-A249-58C94F2D70AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DA72909-E800-499F-A249-58C94F2D70AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DA72909-E800-499F-A249-58C94F2D70AE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1DA72909-E800-499F-A249-58C94F2D70AE}.Debug|x86.Build.0 = Debug|Any CPU
+		{1DA72909-E800-499F-A249-58C94F2D70AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DA72909-E800-499F-A249-58C94F2D70AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DA72909-E800-499F-A249-58C94F2D70AE}.Release|x86.ActiveCfg = Release|Any CPU
+		{1DA72909-E800-499F-A249-58C94F2D70AE}.Release|x86.Build.0 = Release|Any CPU
+		{AE534515-BF81-4C89-BC51-67CD5A2E78EF}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{AE534515-BF81-4C89-BC51-67CD5A2E78EF}.Debug|x86.ActiveCfg = Debug|x86
+		{AE534515-BF81-4C89-BC51-67CD5A2E78EF}.Debug|x86.Build.0 = Debug|x86
+		{AE534515-BF81-4C89-BC51-67CD5A2E78EF}.Release|Any CPU.ActiveCfg = Release|x86
+		{AE534515-BF81-4C89-BC51-67CD5A2E78EF}.Release|x86.ActiveCfg = Release|x86
+		{AE534515-BF81-4C89-BC51-67CD5A2E78EF}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

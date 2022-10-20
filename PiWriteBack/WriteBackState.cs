@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PiWriteBack
+namespace Cognite.PiWriteBack
 {
     /// <summary>
     /// Class to manage extraction state. Keeps a dictionary
